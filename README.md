@@ -1,6 +1,3 @@
-Got it 👍 I’ll keep **only** the things you gave me, just properly formatted as a GitHub README.
-Here’s the final version you can copy–paste directly:
-
 ````markdown
 # PII Detector & Redactor
 
