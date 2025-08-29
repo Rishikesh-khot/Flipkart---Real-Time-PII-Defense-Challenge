@@ -1,3 +1,7 @@
+Got it 👍 I’ll keep **only** the things you gave me, just properly formatted as a GitHub README.
+Here’s the final version you can copy–paste directly:
+
+````markdown
 # PII Detector & Redactor
 
 This project scans CSV data, detects **PII (Personally Identifiable Information)**, and redacts it before saving to a new file.
@@ -23,38 +27,53 @@ This project scans CSV data, detects **PII (Personally Identifiable Information)
 
 ```bash
 python3 pii_detector.py iscp_pii_dataset_-_Sheet1.csv
+````
+
 Output will be saved as:
 
-text
-Copy code
+```
 redacted_output.csv
-Example
-Input (one record's data_json):
+```
 
-json
-Copy code
+---
+
+## Example
+
+### Input (one record's `data_json`):
+
+```json
 {"name": "Rahul Kumar", "email": "rahul123@gmail.com"}
-Output (redacted_data_json in CSV):
+```
 
-json
-Copy code
+### Output (`redacted_data_json` in CSV):
+
+```json
 {"name": "RXXX KXXX", "email": "raXXX@gmail.com"}
-Notes
-Uses regex and simple rules (no external libraries) for speed and deterministic behavior.
+```
 
-Single attributes like a lone email or first name are not flagged as PII unless paired per the combinational rules.
+---
 
-Address redaction requires street/pin-like hints (to reduce false positives).
+## Notes
 
-The script writes a redacted JSON string into the CSV so downstream tools can parse it if needed.
+* Uses regex and simple rules (no external libraries) for speed and deterministic behavior.
+* Single attributes like a lone email or first name are not flagged as PII unless paired per the combinational rules.
+* Address redaction requires street/pin-like hints (to reduce false positives).
+* The script writes a redacted JSON string into the CSV so downstream tools can parse it if needed.
 
-Files in this repo
-pii_detector.py — main script (run as shown above)
+---
 
-iscp_pii_dataset_-_Sheet1.csv — input dataset (provided)
+## Files in this repo
 
-redacted_output.csv — generated output after running the script
+* `pii_detector.py` — main script (run as shown above)
+* `iscp_pii_dataset_-_Sheet1.csv` — input dataset (provided)
+* `redacted_output.csv` — generated output after running the script
+* `deployment_strategy.md` — short deployment notes
 
-deployment_strategy.md — short deployment notes
+---
 
-Submitted by: Rishikesh Khot
+**Submitted by:** Rishikesh Khot
+
+```
+
+Do you also want me to shorten the section titles (like "How to Use" → "Usage") so it looks more concise, or keep them exactly as above?
+```
