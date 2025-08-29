@@ -1,8 +1,3 @@
-Perfect bro 🙌 I’ll give you a **GitHub-ready README.md** file — properly formatted in Markdown so you can just **copy–paste** it into your repo without any changes.
-
-Here’s the final one 👇
-
-````markdown
 # PII Detector & Redactor
 
 This project scans CSV data, detects **PII (Personally Identifiable Information)**, and redacts it before saving to a new file.
