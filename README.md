@@ -68,8 +68,3 @@ redacted_output.csv
 ---
 
 **Submitted by:** Rishikesh Khot
-
-```
-
-Do you also want me to shorten the section titles (like "How to Use" → "Usage") so it looks more concise, or keep them exactly as above?
-```
