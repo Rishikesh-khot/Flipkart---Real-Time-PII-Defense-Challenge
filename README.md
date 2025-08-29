@@ -18,7 +18,7 @@ This project scans CSV data, detects **PII (Personally Identifiable Information)
 ---
 
 ## How to Use
-1. Put your input CSV (for example `iscp_pii_dataset_-_Sheet1.csv`) in the same folder as `pii_detector.py`.  
+1. Put your input CSV (for example `iscp_pii_dataset_-_Sheet1.csv`) in the same folder as `pii_detector_Rishikesh_Khot.py`.  
 2. Run the script:
 
 ```bash
@@ -60,9 +60,9 @@ redacted_output.csv
 
 ## Files in this repo
 
-* `pii_detector.py` — main script (run as shown above)
+* `pii_detector_Rishikesh_Khot.py` — main script (run as shown above)
 * `iscp_pii_dataset_-_Sheet1.csv` — input dataset (provided)
-* `redacted_output.csv` — generated output after running the script
+* `redacted_output_Rishikesh_Khot.csv` — generated output after running the script
 * `deployment_strategy.md` — short deployment notes
 
 ---
