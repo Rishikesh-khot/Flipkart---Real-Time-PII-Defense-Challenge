@@ -5,42 +5,56 @@ This project scans CSV data, detects **PII (Personally Identifiable Information)
 ---
 
 ## Features
-- Detects PII like **phone**, **Aadhaar**, **passport**, and **UPI IDs**.  
-- Detects combinations like **name + email / address / IP**.  
-- Masks sensitive data (e.g., `9876543210 → 98XXXXXX10`).  
-- Creates a new CSV with a `True/False` flag for PII.  
+- Detects standalone PII: **phone**, **Aadhaar**, **passport**, **UPI ID**.  
+- Detects combinational PII: **name + email**, **name + address**, **name + IP/device**, etc.  
+- Masks sensitive fields (example: `9876543210` → `98XXXXXX10`).  
+- Outputs a CSV with `record_id`, `redacted_data_json`, and `is_pii` (True/False).
+
+---
+
+## Prerequisites
+- Python 3.7 or later.
 
 ---
 
 ## How to Use
-1. Make sure **Python 3** is installed.  
-2. Place your input CSV (e.g., `iscp_pii_dataset_-_Sheet1.csv`) in the same folder as `pii_detector.py`.  
-3. Run the script:  
+1. Put your input CSV (for example `iscp_pii_dataset_-_Sheet1.csv`) in the same folder as `pii_detector.py`.  
+2. Run the script:
 
-   ```bash
-   python3 pii_detector.py iscp_pii_dataset_-_Sheet1.csv
+```bash
+python3 pii_detector.py iscp_pii_dataset_-_Sheet1.csv
 Output will be saved as:
-  ```bash
-     redacted_output.csv
 
+text
+Copy code
+redacted_output.csv
 Example
-Input:
+Input (one record's data_json):
 
-```bash
+json
+Copy code
 {"name": "Rahul Kumar", "email": "rahul123@gmail.com"}
+Output (redacted_data_json in CSV):
 
-Output:
-
-```bash
+json
+Copy code
 {"name": "RXXX KXXX", "email": "raXXX@gmail.com"}
-
 Notes
-Uses regex for standalone PII (phone, Aadhaar, passport, UPI).
+Uses regex and simple rules (no external libraries) for speed and deterministic behavior.
 
-Detects combinational PII (e.g., name + email, name + address).
+Single attributes like a lone email or first name are not flagged as PII unless paired per the combinational rules.
 
-Redacts sensitive fields while keeping other data intact.
+Address redaction requires street/pin-like hints (to reduce false positives).
 
-Optimized for accuracy and efficiency.
+The script writes a redacted JSON string into the CSV so downstream tools can parse it if needed.
+
+Files in this repo
+pii_detector.py — main script (run as shown above)
+
+iscp_pii_dataset_-_Sheet1.csv — input dataset (provided)
+
+redacted_output.csv — generated output after running the script
+
+deployment_strategy.md — short deployment notes
 
 Submitted by: Rishikesh Khot
