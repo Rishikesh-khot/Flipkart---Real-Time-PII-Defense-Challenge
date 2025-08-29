@@ -20,20 +20,20 @@ This project scans CSV data, detects **PII (Personally Identifiable Information)
    ```bash
    python3 pii_detector.py iscp_pii_dataset_-_Sheet1.csv
 Output will be saved as:
+  ```bash
+     redacted_output.csv
 
-Copy code
-redacted_output.csv
 Example
 Input:
 
-json
-Copy code
+```bash
 {"name": "Rahul Kumar", "email": "rahul123@gmail.com"}
+
 Output:
 
-json
-Copy code
+```bash
 {"name": "RXXX KXXX", "email": "raXXX@gmail.com"}
+
 Notes
 Uses regex for standalone PII (phone, Aadhaar, passport, UPI).
 
