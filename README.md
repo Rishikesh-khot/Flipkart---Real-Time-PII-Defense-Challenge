@@ -54,13 +54,4 @@ This project scans CSV data, detects **PII (Personally Identifiable Information)
 
 ---
 
-**Submitted by:** \[Your Full Name or Username]
-
-```
-
----
-
-✅ Now it’s **GitHub-ready**. Just paste this as your `README.md` file, and it’ll render perfectly on GitHub with headings, code blocks, and examples.  
-
-Do you want me to also prepare the `deployment_strategy.md` in the **same copy-paste GitHub format** so both files look uniform?
-```
+**Submitted by: Rishikesh Khot
