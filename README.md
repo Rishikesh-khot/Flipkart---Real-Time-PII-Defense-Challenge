@@ -1,4 +1,3 @@
-````markdown
 # PII Detector & Redactor
 
 This project scans CSV data, detects **PII (Personally Identifiable Information)**, and redacts it before saving to a new file.
