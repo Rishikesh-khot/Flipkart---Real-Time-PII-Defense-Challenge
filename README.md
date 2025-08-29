@@ -1,4 +1,4 @@
-# PII Detector & Redactor
+# Flipkart PII Detection and Redaction Challenge (Project Guardian 2.0)
 
 This project scans CSV data, detects **PII (Personally Identifiable Information)**, and redacts it before saving to a new file.
 
